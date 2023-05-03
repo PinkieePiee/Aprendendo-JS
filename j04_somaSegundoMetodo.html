@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Outro método de soma por formulário</title>
+</head>
+
+<body>
+    <h1>Segundo método por formulário</h1>
+
+    <form name="FormSoma" action="" method="post">
+        Digite um número para a soma..........: <input type="number" name="numero1" /> <br />
+        Digite um segundo número para a soma..........: <input type="number" name="numero2" /> <br />
+        <input type="button" name="btn_soma" value="Somar" onclick="somar()" />
+        <input type="reset" name="btn_apagar" value="Apagar" />
+       
+        <script language="JavaScript">
+            <!--
+                //Definição das variáveis:
+                let x;
+                let y;
+                let z;
+
+                //OBJETIVO: Somar duas variáveis com valor numérico, sem que seja lida como String, em um formulário
+
+                //Entrada de Dados:
+                function somar() {
+                    x = parseInt(document.FormSoma.numero1.value);
+                    y = parseInt(document.FormSoma.numero2.value);
+
+                    //Processamento de dados
+                    z = x + y;
+
+                    //saída de dados
+                    window.alert('O resultado da soma é: ' + z.toString());
+                }
+
+                -->
+        </script>
+    </form>
+</body>
+</html>
