@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checagem após a execução</title>
+</head>
+<body>
+   <h1>DO...WHILE</h1> 
+
+   <script language="JavaScript">
+    <!--
+        //OBJETIVO: Cálcular o salário líquido de um funcionário que recebe por hora (horista).
+        //O que o cálculo deve conter:
+        //- Quantidade de horas trabalhadas;
+        // - Valor das horas trabalhadas:
+        // - Percentual de desconto do INSS;
+        // - Informar a classificação salarial
+        // - Métodos a usar:
+        // Entrada: window.prompt;
+        // Saída: document.write:
+
+        //Declaração das variáveis:
+        let js_ht; //ENTRADA - Horas trabalhadas
+        let js_vh; //ENTRADA - Valor/hora
+        let js_inss; //ENTRADA - Percentual desconto 
+        let js_tds; //SAÍDA - Total desconto
+        let js_sl; //SAÍDA - salário líquido
+        let js_sb; // SAÍDA - salário bruto
+        let js_resposta = true; //O que fará o laço rodar até ser desativado
+
+        //Laço de repetição do...while:
+        do {
+
+            //entrada de dados:
+            js_ht = parseFloat(window.prompt('Informe a Quantidade de Horas Trabalhadas/Mês: (135 a 180)','00'));
+            js_vh = parseFloat(window.prompt('Informe o Valor da Hora Trabalhada: (25 a 50)','00'));
+            js_inss = parseFloat(window.prompt ('Informe o Percentual de Desconto INSS: (5 a 15)','00'));
+
+            //Processamento de dados:
+            js_sb = js_ht * js_vh;
+            js_tds = (js_inss/100) * js_sb;  
+            js_sl = js_sb - js_tds;
+            
+            //Saída de dados:
+            document.write('<p><b>Demonstativo para cálculo do salário líquido</b>');
+
+            document.write('<p>Quantidade de horas trabalhadas (135 a 180) => ' + js_ht);
+                if (js_ht > 180) {
+                    document.write('<p><b>Máximo excedido!!</b>');
+                }
+                if (js_ht < 135) {
+                    document.write('<p><b>Mínimo inválido!!</b>');
+                }
+
+            document.write('<p>Valor das horas trabalhadas (25 a 50) => ' + js_vh);
+                if (js_vh > 50) {
+                    document.write('<p><b>Máximo excedido!!</b>');
+                }
+                if (js_vh < 25) {
+                    document.write('<p><b>Mínimo inválido!!</b>');
+                }
+
+            document.write('<p>Percentual de desconto do INSS (5 a 15) => ' + js_inss);
+                if (js_inss > 15) {
+                    document.write('<p><b>Máximo excedido!!</b>');
+                }
+                if (js_inss < 5) {
+                    document.write('<p><b>Mínimo inválido!!</b>');
+                }
+
+            document.write('<p><b>------------------------------------------------------</b>');
+            document.write('<p><b>Salário BRUTO! => </b>' + js_sb);
+            document.write('<p><b>Salário LÍQUIDO! => </b>' + js_sl);
+            document.write('<p><b>Total do DESCONTO do INSS! => </b>' + js_tds);
+
+            //Saída de dados com aninhamento de if's:
+            if (js_sl > 10500) {
+                document.write('<p><b>Salário elevado!</b> maior que 10.500');
+            }
+            else {
+                if (js_sl > 6000) {
+                    document.write('<p><b>Salário satisfatório!</b> maior que 6.000');
+                }
+                else {
+                    if (js_sl > 3000) {
+                        document.write('<p><b>Salário moderado!</b> maior que 3.000');
+                    }
+                    else {
+                        document.write('<p><b>Salário insatisfatório!</b> menor que 3.000');
+                    }
+                }
+            }
+        
+            document.write('<p>-------------------------------------------------------------------');
+            js_resposta = window.confirm('Deseja continuar?');
+        }
+        while (js_resposta == true);
+        
+        -->
+   </script>
+</body>
+</html>
